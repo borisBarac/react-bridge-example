@@ -2,6 +2,8 @@
 
 import React, {Component} from 'react'
 import {NativeModules} from 'react-native'
+import {StackNavigator} from 'react-navigation'
+import ReactNativeComponent from './components/ReactNativeComponent'
 import {
   AppRegistry,
   StyleSheet,
@@ -10,14 +12,22 @@ import {
   Button,
 } from 'react-native'
 
-export default class BridgeTest extends Component {
+import PropTypes from 'prop-types'
+
+class BridgeTest extends Component {
+  static navigationOptions = {
+    title: 'React Bridge',
+  };
+
   constructor() {
-      super()
-      this.state = {
-         nativeTitle: 'Init native title',
-      }
-   }
+    super()
+    this.state = {
+      nativeTitle: 'Init native title',
+    }
+  }
+
   render() {
+    const {navigate} = this.props.navigation
     return (
       <View style={styles.container}>
         <Text style={styles.main}>
@@ -30,11 +40,17 @@ export default class BridgeTest extends Component {
           title="Show Native Alert"
           onPress={this._callNativeContext}
           style={styles.main}
-          accessibilityLabel = "NativeAlert"
+          accessibilityLabel="NativeAlert"
         />
         <Text style={styles.main}>
           {this.state.nativeTitle}
         </Text>
+        <Button
+          title="React component in native view controller"
+          onPress={() => navigate('NativeComponent')}
+          style={styles.main}
+          accessibilityLabel="reactComponentInNative"
+        />
       </View>
     )
   }
@@ -47,6 +63,10 @@ export default class BridgeTest extends Component {
       this.setState({nativeTitle: objcTitle})
     })
   }
+}
+
+BridgeTest.propTypes = {
+  navigation: PropTypes.object.isRequired,
 }
 
 const background = '#F5FCFF'
@@ -71,4 +91,9 @@ const styles = StyleSheet.create({
   },
 })
 
-AppRegistry.registerComponent('BridgeTest', () => BridgeTest)
+const SimpleApp = StackNavigator({
+  Home: {screen: BridgeTest},
+  NativeComponent: {screen: ReactNativeComponent},
+})
+
+AppRegistry.registerComponent('BridgeTest', () => SimpleApp)

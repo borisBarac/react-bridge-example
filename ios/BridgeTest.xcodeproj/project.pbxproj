@@ -36,6 +36,7 @@
 		2DCD954D1E0B4F2C00145EB5 /* BridgeTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* BridgeTestTests.m */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		6B77254D1F2545F500C33631 /* NativeAlertDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B77254C1F2545F500C33631 /* NativeAlertDialog.m */; };
+		6BB65FB11F27FDCF00620A4A /* NativeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB65FB01F27FDCF00620A4A /* NativeView.m */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 /* End PBXBuildFile section */
 
@@ -284,6 +285,8 @@
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		6B77254B1F2545F500C33631 /* NativeAlertDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeAlertDialog.h; sourceTree = "<group>"; };
 		6B77254C1F2545F500C33631 /* NativeAlertDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NativeAlertDialog.m; sourceTree = "<group>"; };
+		6BB65FAF1F27FDCF00620A4A /* NativeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NativeView.h; path = BridgeTest/NativeView.h; sourceTree = "<group>"; };
+		6BB65FB01F27FDCF00620A4A /* NativeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NativeView.m; path = BridgeTest/NativeView.m; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -429,6 +432,8 @@
 				13B07FB71A68108700A75B9A /* main.m */,
 				6B77254B1F2545F500C33631 /* NativeAlertDialog.h */,
 				6B77254C1F2545F500C33631 /* NativeAlertDialog.m */,
+				6BB65FAF1F27FDCF00620A4A /* NativeView.h */,
+				6BB65FB01F27FDCF00620A4A /* NativeView.m */,
 			);
 			name = BridgeTest;
 			sourceTree = "<group>";
@@ -971,6 +976,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B77254D1F2545F500C33631 /* NativeAlertDialog.m in Sources */,
+				6BB65FB11F27FDCF00620A4A /* NativeView.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
